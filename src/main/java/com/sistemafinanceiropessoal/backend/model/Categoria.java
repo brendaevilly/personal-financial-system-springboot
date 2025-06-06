@@ -1,7 +1,5 @@
 package com.sistemafinanceiropessoal.backend.model;
 
-import java.util.List;
-
 import jakarta.persistence.*; 
 import lombok.*; 
 
@@ -17,7 +15,4 @@ public class Categoria {
     private String nomeCategoria;
     @Enumerated(EnumType.STRING)
     private TipoCategoria tipo;
-
-    @OneToMany(mappedBy = "categoria")
-    private List<Transacao> transacoes;
 }

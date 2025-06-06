@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import com.sistemafinanceiropessoal.backend.model.Transacao;
 import com.sistemafinanceiropessoal.backend.model.Categoria;
 import com.sistemafinanceiropessoal.backend.model.TipoCategoria;
@@ -12,6 +13,7 @@ import com.sistemafinanceiropessoal.backend.repository.TransacaoRepository;
 @Service
 
 public class TransacaoService {
+    @Autowired
     private final TransacaoRepository transacaoRepository;
 
     public TransacaoService(TransacaoRepository transacaoRepository){

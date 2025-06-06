@@ -2,15 +2,23 @@ package com.sistemafinanceiropessoal.backend.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sistemafinanceiropessoal.backend.repository.CategoriaRepository;
 import com.sistemafinanceiropessoal.backend.model.Categoria;
 
+import com.sistemafinanceiropessoal.backend.model.Transacao;
+import com.sistemafinanceiropessoal.backend.repository.TransacaoRepository;
+
 @Service
 
 public class CategoriaService {
-    CategoriaRepository categoriaRepository;
+    @Autowired
+    private final CategoriaRepository categoriaRepository;
+
+    @Autowired
+    private TransacaoRepository transacaoRepository;
 
     public CategoriaService(CategoriaRepository categoriaRepository){
         this.categoriaRepository = categoriaRepository;
@@ -31,7 +39,10 @@ public class CategoriaService {
 
     public void deletar(Long id){
         Categoria c = buscarPorId(id);
-        if(c.getTransacoes() != null && !c.getTransacoes().isEmpty()){
+
+        List<Transacao> transacoesDaCategoria = transacaoRepository.findTransacaoByCategoria_Id(id); 
+
+        if(transacoesDaCategoria != null && !transacoesDaCategoria.isEmpty()){
             throw new RuntimeException("Não é possível deletar categoria. Transações associadas."); 
         }
 

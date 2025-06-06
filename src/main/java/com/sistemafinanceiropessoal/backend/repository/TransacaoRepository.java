@@ -15,4 +15,6 @@ public interface TransacaoRepository extends JpaRepository<Transacao, Long>{
     Double somaPorTipo(@Param("tipo") TipoCategoria tipo);
 
     List<Transacao>findByCategoria(Categoria categoria);
+
+    List<Transacao> findTransacaoByCategoria_Id(Long categotiaId);
 }
