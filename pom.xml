@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.5.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
 	</parent>
 	<groupId>com.sistemafinanceiropessoal</groupId>
 	<artifactId>backend</artifactId>
@@ -67,6 +67,12 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- Banco de dados em memória H2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
 	</dependencies>
 
