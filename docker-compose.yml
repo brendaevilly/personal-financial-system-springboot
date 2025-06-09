@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://192.168.1.38:3306/meubanco
+      SPRING_DATASOURCE_USERNAME: meuusuario
+      SPRING_DATASOURCE_PASSWORD: minhasenha
+    restart: unless-stopped
+
+
+      
