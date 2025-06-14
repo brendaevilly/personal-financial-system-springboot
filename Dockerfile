@@ -5,7 +5,7 @@
 # RUN mvn clean package -DskipTests
 
 # Etapa 2: imagem final com JAR
-FROM eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:21-jdk-alpine
 
 # Define o diretório de trabalho dentro do container
 WORKDIR /app
