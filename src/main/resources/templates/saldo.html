@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" th:href="@{/css/stylesaldo.css}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <title>Resumo Financeiro</title>
+</head>
+<body>
+  <div id="itens">
+    <nav class="navegar">
+      <a class="na" th:href="@{/index}"><i class="fas fa-home"></i> Início</a>
+      <a class="na" th:href="@{/categorias}"><i class="fas fa-list"></i> Categorias</a>
+      <a class="na" th:href="@{/saldo}"><i class="fas fa-wallet"></i> Saldo</a>
+      <a class="na" th:href="@{/cadastrartrans}"><i class="fas fa-plus"></i> Transações</a>
+      <a class="na" th:href="@{/listartrans}"><i class="fas fa-table"></i> Listar</a>
+    </nav>
+  </div>
+
+  <h1>Resumo Financeiro</h1>
+
+  <div class="resumo-financeiro">
+    <div class="imag">
+      <img th:src="@{/img/Imagem_do_WhatsApp_de_2025-06-06_à_s__20.38.33_85492828-removebg-preview.png}" alt="moça" />
+    </div>
+    <div class="container">
+      <div class="card">
+        <i class="fas fa-money-bill-wave"></i>
+        <h3>Receita</h3>
+        <p th:text="'R$ ' + ${receitaFormatada}">R$ 0,00</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-receipt"></i>
+        <h3>Despesas</h3>
+        <p th:text="'R$ ' + ${despesaFormatada}">R$ 0,00</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-wallet"></i>
+        <h3>Saldo</h3>
+        <p th:text="'R$ ' + ${saldoFormatado}">R$ 0,00</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grafico">
+    <h2>Resumo de Entradas</h2>
+
+    <div class="barra" id="barra-receita">
+      <span>Receita</span>
+      <div class="preenchimento receita" th:style="'width: ' + ${barraReceita} + '%'"></div>
+      <span th:text="'R$ ' + ${receitaFormatada}"></span>
+    </div>
+
+    <div class="barra" id="barra-despesa">
+      <span>Despesas</span>
+      <div class="preenchimento despesa" th:style="'width: ' + ${barraDespesa} + '%'"></div>
+      <span th:text="'R$ ' + ${despesaFormatada}"></span>
+    </div>
+
+    <div class="barra" id="barra-saldo">
+      <span>Saldo</span>
+      <div class="preenchimento saldo" th:style="'width: ' + ${barraSaldo} + '%'"></div>
+      <span th:text="'R$ ' + ${saldoFormatado}"></span>
+    </div>
+  </div>
+</body>
+</html>

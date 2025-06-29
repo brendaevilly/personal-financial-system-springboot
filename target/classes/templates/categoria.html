@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" th:href="@{/css/stylecategoria.css}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <title>Categoria</title>
+</head>
+<body>
+  <div id="itens">
+    <nav class="navegar">
+      <a class="na" th:href="@{/index}"><i class="fas fa-home"></i> Início</a> 
+      <a class="na" th:href="@{/categorias}"><i class="fas fa-list"></i> Categorias</a> 
+      <a class="na" th:href="@{/saldo}"><i class="fas fa-wallet"></i> Saldo</a>
+      <a class="na" th:href="@{/cadastrartrans}"><i class="fas fa-plus"></i> Transações</a>
+      <a class="na" th:href="@{/listartrans}"><i class="fas fa-table"></i> Listar</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="geral">
+      <h1>Cadastro de Categoria</h1>
+
+      <!-- Ajustado para enviar POST para o controller Thymeleaf -->
+      <form th:action="@{/categorias}" method="post" th:object="${categoria}">
+        <label for="categoria">Nome da Categoria</label>
+        <input type="text" id="categoria" th:field="*{nomeCategoria}" required />
+
+        <label>Tipo:</label>
+        <select th:field="*{tipo}" required>
+          <option value="">Selecione</option>
+          <option value="RECEITA">Receita</option>
+          <option value="DESPESA">Despesa</option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+
+      <h2>Categorias cadastradas</h2>
+
+      <ul>
+        <li th:each="cat : ${categorias}">
+          <span th:text="${cat.nomeCategoria}"></span> - 
+          <span th:text="${cat.tipo}"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

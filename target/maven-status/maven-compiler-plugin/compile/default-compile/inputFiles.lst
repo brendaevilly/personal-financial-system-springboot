@@ -1,0 +1,11 @@
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/BackendApplication.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/controller/CategoriaController.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/controller/PaginaController.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/controller/TransacaoController.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/model/Categoria.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/model/TipoCategoria.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/model/Transacao.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/repository/CategoriaRepository.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/repository/TransacaoRepository.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/service/CategoriaService.java
+/home/brendaevilly/personal-financial-system-springboot-main/src/main/java/com/sistemafinanceiropessoal/backend/service/TransacaoService.java

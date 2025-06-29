@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" th:href="@{/css/stylelistar.css}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Listar Transações</title>
+</head>
+<body>
+  <nav class="navegar">
+    <a class="na" th:href="@{/index}"><i class="fas fa-home"></i> Início</a>
+    <a class="na" th:href="@{/categorias}"><i class="fas fa-list"></i> Categorias</a>
+    <a class="na" th:href="@{/saldo}"><i class="fas fa-wallet"></i> Saldo</a>
+    <a class="na" th:href="@{/cadastrartrans}"><i class="fas fa-plus"></i> Transações</a>
+    <a class="na" th:href="@{/listartrans}"><i class="fas fa-table"></i> Listar</a>
+  </nav>
+
+  <div class="container">
+    <h1>Transações Cadastradas</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Valor</th>
+          <th>Categoria</th>
+          <th>Descrição</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="transacao : ${transacoes}">
+          <td th:text="${transacao.categoria.tipo}"></td>
+          <td th:text="${#numbers.formatDecimal(transacao.valor, 1, 2)}"></td>
+          <td th:text="${transacao.categoria.nomeCategoria}"></td>
+          <td th:text="${transacao.descricao}"></td>
+          <td th:text="${#temporals.format(transacao.data, 'dd/MM/yyyy')}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+

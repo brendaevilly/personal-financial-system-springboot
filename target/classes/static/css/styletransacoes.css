@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgba(161, 197, 197, 0.263);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+ul li{
+  background-color: #eae2f8;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#itens{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 100%;
+  background-color: #832c5c;
+  z-index: 1000;
+}
+
+#itens.show{
+  left: 0;
+}
+
+i#burguer{
+  position: fixed;
+  color: #832c5c;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.navegar{
+  background-color: #832c5c;
+  padding-top: 50px;
+  gap: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+a{
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+a:hover{
+  color: black;
+  transform: scale(1.1);
+}
+
+form label{
+  display: block;
+  margin-top: 15px;
+  color: #333;
+}
+
+input, select{
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.container{
+  background-color: white;
+  width: calc(100% - 150px);
+  max-width: 800px;
+  margin: 40px auto 40px 400px; 
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(126, 87, 194, 0.2);
+  color: #832c5c;
+  box-sizing: border-box;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #832c5c;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+button:hover{
+  background-color: #cd8db090;
+  color: black;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td{
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th{
+  background-color: #832c5c;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+@media(max-width: 768px){
+  .container{
+    width: calc(100% - 150px);
+    margin: 20px auto 20px 150px;
+    padding: 20px;
+  }
+
+  input, select, button{
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .navegar{
+    padding: 20px 10px;
+  }
+
+  .navegar a{
+    font-size: 16px;
+  }
+
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Gerenciamento de Despesas</title>
+</head>
+<body>
+  <h1>Bem-vindo ao seu <br /><span>Controle Financeiro</span></h1>
+  <div class="container">
+    <a class="na" th:href="@{/categorias}"><i class="fas fa-list"></i> Categorias</a>
+    <a class="na" th:href="@{/saldo}"><i class="fas fa-wallet"></i> Saldo</a>
+    <a class="na" th:href="@{/cadastrartrans}"><i class="fas fa-plus"></i> Transações</a>
+    <a class="na" th:href="@{/listartrans}"><i class="fas fa-table"></i> Listar</a>
+  </div>
+</body>
+</html>
+

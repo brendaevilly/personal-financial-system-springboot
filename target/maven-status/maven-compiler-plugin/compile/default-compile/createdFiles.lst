@@ -1,0 +1,11 @@
+com/sistemafinanceiropessoal/backend/controller/CategoriaController.class
+com/sistemafinanceiropessoal/backend/controller/TransacaoController.class
+com/sistemafinanceiropessoal/backend/model/TipoCategoria.class
+com/sistemafinanceiropessoal/backend/BackendApplication.class
+com/sistemafinanceiropessoal/backend/service/TransacaoService.class
+com/sistemafinanceiropessoal/backend/controller/PaginaController.class
+com/sistemafinanceiropessoal/backend/repository/TransacaoRepository.class
+com/sistemafinanceiropessoal/backend/service/CategoriaService.class
+com/sistemafinanceiropessoal/backend/model/Transacao.class
+com/sistemafinanceiropessoal/backend/repository/CategoriaRepository.class
+com/sistemafinanceiropessoal/backend/model/Categoria.class
